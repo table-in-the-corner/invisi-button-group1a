@@ -26,7 +26,7 @@ export class InvisiButton extends LitElement {
       :hover{
         background-color: transparent;
         color: black;
-        border: 2px solid black; 
+        border: 2px solid var(--invisi-button-outline); 
       }
       :is-user-selected {
         background-color: var(--invisi-button-bg-color-is-user-selected);
@@ -46,13 +46,14 @@ export class InvisiButton extends LitElement {
         font-family: Sans-serif;
         font-weight: 540;
         width: 150px;
-
       }
       a span {
         display: flex;
         justify-content: center;
       }
-      
+      a :hover {
+        border: transparent;
+      }
   `;
   
 }
