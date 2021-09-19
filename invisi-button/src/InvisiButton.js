@@ -15,7 +15,7 @@ export class InvisiButton extends LitElement {
         );
         --invisi-button-bg-color-is-user-selected: var(
           --simple-colors-default-theme-accent-10,
-          darkgreen
+          transparent
         );
         --invisi-button-bg-color: var(
           --simple-colors-default-theme-accent-7,
@@ -27,6 +27,12 @@ export class InvisiButton extends LitElement {
         background-color: transparent;
         color: black;
         border: 2px solid var(--invisi-button-outline); 
+      }
+      :focus{
+        background-color: transparent;
+        color: black;
+        border: 2px solid var(--invisi-button-outline);
+        outline: transparent;
       }
       :is-user-selected {
         background-color: var(--invisi-button-bg-color-is-user-selected);
