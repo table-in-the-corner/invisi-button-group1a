@@ -74,7 +74,7 @@ export class InvisiButton extends LitElement {
 
   constructor() {
     super();
-    this.link = "#";
+    this.link = ""https://teuxdeux.com/signup";
     this.title = null;
     this.accentColor = "black";
     if (this.querySelector("a")) {
