@@ -5,25 +5,25 @@
   <style>
     body {
       background: lightgray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   </style>
 </head>
 <body>
   <div id="demo"></div>
+  
+
+  <invisi-button icon="chevron-right" title="Join Now" link="https://teuxdeux.com/"></invisi-button>
+  
+  <invisi-button icon="save" title="Save"></invisi-button>
+  <invisi-button icon="av:games" title="Play a game" link="https://ea.com"></invisi-button>
+  <!-- <invisi-button icon="No icon" link="https://youtube.com/"></invisi-button> -->
 
   <script type="module">
-    import { html, render } from 'lit';
     import '../invisi-button.js';
-
-    const title = '';
-    render(
-      html`
-        <invisi-button .title=${title}>
-          Join now for free
-        </invisi-button>
-      `,
-      document.querySelector('#demo')
-    );
   </script>
 </body>
 </html>
