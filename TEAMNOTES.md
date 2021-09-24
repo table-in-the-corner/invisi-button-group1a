@@ -8,6 +8,6 @@ September 21 Class: <br>
   <br>
  	What are your next steps:<br>
  		-The next steps we will be refining this further and working more with the demo section. We will be adding more features such as having the button adjust with size, adding the disable feature, and adding an icon.
-<br>
+<br><br>
 September 23<br>
 Today we added icons to our buttons and ironed out some of the issues we were having in the demo. We are now working on getting the disabled aspect to work and looking into the color changing aspects. We plan to watch the recorded video to identify some possible changes we could make to our code.
