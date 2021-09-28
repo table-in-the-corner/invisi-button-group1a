@@ -20,4 +20,21 @@ Peer Review: Jonah and Griffin <br>
 penguinA.setAttribute(
     'style',
   'text-decoration:none;  opacity: 0.5; pointer-events: none;' <br>
+  
+  
+  
+  
+  
+ <br><br><br><br>
+ To Do:<br>
+ - wrap a tag in a button<br>
+ - disabled<br>
+ - shadow parts<br>
+ - dark color change<br>
+ - storybook<br>
+ 
+ Things to Include in Demo:<br>
+ - default button<br>
+ - disabled button<br>
+ - dark mode button<br>
 
