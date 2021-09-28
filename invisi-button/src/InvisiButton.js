@@ -6,32 +6,47 @@ export class InvisiButton extends LitElement {
   static get styles() {
     return css`
       :host {
-      display: inline-block;
-      color: var(--invisi-button-text-color, white);
+      display: block;
+      padding: 10px;
+      --invisi-button-color: white;
+      --invisi-button-background-color: black;
+      --invisi-button-disabled-background-color: lightgray;
+      }
+      :host([dark]) {
         --invisi-button-color: black;
-        margin: 20px 20px 0;
+        --invisi-button-background-color: white;
       }
-      a:hover, a:focus {
+      :host([disabled]) {
+        pointer-events:none;
+        color: var(--invisi-button-background-color);
+        cursor: not-allowed;
+      }
+      .invisi {
         color: var(--invisi-button-color);
-        background-color: transparent;
-        border: 2px solid var(--invisi-button-color);
-      }
-      a {
-        display: block;
-        color: var(--invisi-button-text-color);
-        background-color: var(--invisi-button-color);
+        background-color: var(--invisi-button-background-color);
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         text-decoration: none;
         font-size: 18px;
-        border-radius: 5px 5px 5px 5px;
-        box-shadow: 0 6px 26px 0 rgba(0, 0, 0, 0.16);
+        border-radius: 5px;
         padding: 15px 15px;
         font-family: Sans-serif;
         font-weight: 540;
-        width: 150px;
+        text-align: center;
+        border: 2px solid var(--invisi-button-background-color);
       }
-      a span {
-        display: flex;
-        justify-content: center;
+      .invisi:disabled {
+        color: var(--invisi-button-background-color);
+        background-color: var(--invisi-button-disabled-background-color);
+        cursor: not-allowed;
+      }
+      .invisi:hover, .invisi:focus, .invisi:active {
+        color: var(--invisi-button-background-color);
+        background-color: transparent;
+        border: 2px solid var(--invisi-button-background-color);
+      }
+      a {
+        color: var(--invisi-button-color);
+        text-decoration: none
       }
   `;
 }
@@ -40,22 +55,26 @@ export class InvisiButton extends LitElement {
     return {
       link: { type: String },
       title: { type: String },
-      icon: {type: String},
+      icon: { type: String },
+      disabled: { type: Boolean, reflect: true }
     };
   }
 
   constructor() {
     super();
-    this.link = "";
-    this.title = null;
+    this.link = "https://teuxdeux.com/";
+    this.title = "Join now for free";
     this.icon = false;
+    this.disabled = false;
   }
 
   render() {
-    return html` <a href="${this.link}" role="button">
+    return html`
+    <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link">
+    <button class = "invisi" ?disabled="${this.disabled}">
     ${this.icon ? html`<simple-icon-lite icon="${this.icon}"></simple-icon-lite>` : ''}
     ${this.title}
-    <slot></slot>
+    </button>
     </a>
     `;
   }
