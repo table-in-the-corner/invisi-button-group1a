@@ -3,24 +3,16 @@
 <head>
   <meta charset="utf-8">
   <style>
-    body {
-      background: lightgray;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+      body {
+        background: gray;
+      }
   </style>
 </head>
 <body>
-  <div id="demo"></div>
-  
-
+  <invisi-button></invisi-button>
+  <invisi-button title="Dark Mode" dark></invisi-button>
+  <invisi-button title="Disabled" disabled icon="block"></invisi-button>
   <invisi-button icon="chevron-right" title="Join Now" link="https://teuxdeux.com/"></invisi-button>
-  
-  <invisi-button icon="save" title="Save"></invisi-button>
-  <invisi-button icon="av:games" title="Play a game" link="https://ea.com"></invisi-button>
-  <!-- <invisi-button icon="No icon" link="https://youtube.com/"></invisi-button> -->
 
   <script type="module">
     import '../invisi-button.js';
