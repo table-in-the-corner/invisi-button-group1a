@@ -11,3 +11,13 @@ September 21: <br>
 <br><br>
 September 23<br>
 Today we added icons to our buttons and ironed out some of the issues we were having in the demo. We are now working on getting the disabled aspect to work and looking into the color changing aspects. We plan to watch the recorded video to identify some possible changes we could make to our code.
+<br><br>
+September 28, 2021<br>
+Peer Review: Jonah and Griffin <br>
+- 2 Similarities: styling for the css of the a tag is the same structure as ours; hover styles both change the background color <br>
+- 2 Differences: they are currently using a button where we are using an a tag(solution: wrap a tag in a button?); their button contains more elements than ours does because they are using pictures for styling where we are using color changes.   <br>
+- Code Snippet that could be used from their project for solution: We would like to use how they wrap their a tag in a button tag for styling and disabling<br>
+penguinA.setAttribute(
+    'style',
+  'text-decoration:none;  opacity: 0.5; pointer-events: none;' <br>
+
