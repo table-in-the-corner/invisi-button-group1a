@@ -85,7 +85,7 @@ export class InvisiButton extends LitElement {
   render() {
     return html`
     <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link">
-    <button class = "invisi" ?disabled="${this.disabled}" ?dark="${this.dark}">
+    <button class = "invisi" ?disabled="${this.disabled}">
     ${this.title}
     ${this.icon ? html`<simple-icon-lite  class= "arrowrotate" icon="${this.icon}"></simple-icon-lite>` : ''}
     </button>
