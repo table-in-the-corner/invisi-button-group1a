@@ -54,8 +54,8 @@ export class InvisiButton extends LitElement {
       }
       .arrowrotate:hover 
       {
-        transform:rotate(90deg);
-        transition: all 0.1s ease;
+        transform:rotate(360deg);
+        transition: all 0.5s ease;
       }
       a {
         color: var(--invisi-button-color);
@@ -85,8 +85,8 @@ export class InvisiButton extends LitElement {
     return html`
     <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link">
     <button class = "invisi" ?disabled="${this.disabled}">
-    ${this.icon ? html`<simple-icon-lite  class= "arrowrotate" icon="${this.icon}"></simple-icon-lite>` : ''}
     ${this.title}
+    ${this.icon ? html`<simple-icon-lite  class= "arrowrotate" icon="${this.icon}"></simple-icon-lite>` : ''}
     </button>
     </a>
     `;
