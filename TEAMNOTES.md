@@ -20,6 +20,13 @@ Peer Review: Jonah and Griffin <br>
 penguinA.setAttribute(
     'style',
   'text-decoration:none;  opacity: 0.5; pointer-events: none;' <br>
+  <br><br>
+  September 30, 2021<br>
+  Things that are left for us to do:<br>
+  - add button sound into it for bonus points<br>
+  - upload to NPM<br>
+  - storybook errors need to be fixed<br>
+  - update .json<br>
   
   
   
