@@ -5,18 +5,22 @@ export default {
   title: 'InvisiButton',
   component: 'invisi-button',
   argTypes: {
+    link: { control: 'text' },
     title: { control: 'text' },
-    counter: { control: 'number' },
-    textColor: { control: 'color' },
+    textColor: { control: 'text' },
+    icon: { control: 'text'},
+    disabled: { control: 'boolean'}
   },
 };
 
-function Template({ title = 'Hello world', counter = 5, textColor, slot }) {
+function Template({ link = "https://teuxdeux.com/", title = "Join Now", icon = "chevron-right", disabled = false, textColor, slot}) {
   return html`
     <invisi-button
-      style="--invisi-button-text-color: ${textColor || 'black'}"
+      style="--invisi-button-color: ${textColor || 'white'}"
       .title=${title}
-      .counter=${counter}
+      .link=${link}
+      .icon=${icon}
+      .disabled=${disabled}
     >
       ${slot}
     </invisi-button>
@@ -25,20 +29,4 @@ function Template({ title = 'Hello world', counter = 5, textColor, slot }) {
 
 export const Regular = Template.bind({});
 
-export const CustomTitle = Template.bind({});
-CustomTitle.args = {
-  title: 'My title',
-};
 
-export const CustomCounter = Template.bind({});
-CustomCounter.args = {
-  counter: 123456,
-};
-
-export const SlottedContent = Template.bind({});
-SlottedContent.args = {
-  slot: html`<p>Slotted content</p>`,
-};
-SlottedContent.argTypes = {
-  slot: { table: { disable: true } },
-};

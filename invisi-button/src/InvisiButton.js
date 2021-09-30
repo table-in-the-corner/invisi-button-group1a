@@ -50,9 +50,8 @@ export class InvisiButton extends LitElement {
         background-color: transparent;
         border: 2px solid var(--invisi-button-background-color);
         cursor:pointer;
-        
       }
-      .arrowrotate:hover 
+      button:hover .arrowrotate, button:focus .arrowrotate 
       {
         transform:rotate(360deg);
         transition: all 0.5s ease;
@@ -69,7 +68,8 @@ export class InvisiButton extends LitElement {
       link: { type: String },
       title: { type: String },
       icon: { type: String },
-      disabled: { type: Boolean, reflect: true }
+      disabled: { type: Boolean, reflect: true },
+      dark: { type: Boolean, reflect: true }
     };
   }
 
@@ -79,6 +79,7 @@ export class InvisiButton extends LitElement {
     this.title = "Join now for free";
     this.icon = false;
     this.disabled = false;
+    this.dark = false;
   }
 
   render() {

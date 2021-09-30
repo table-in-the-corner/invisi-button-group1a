@@ -1,9 +1,9 @@
 {
-  "name": "invisi-button",
+  "name": "@table-in-the-corner/invisi-button-group1a",
   "description": "Webcomponent invisi-button following open-wc recommendations",
   "license": "MIT",
   "author": "invisi-button",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -19,6 +19,10 @@
   "dependencies": {
     "@lrnwebcomponents/simple-icon": "^4.0.0",
     "lit": "^2.0.0-rc.4"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.17",
