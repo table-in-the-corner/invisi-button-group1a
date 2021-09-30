@@ -50,12 +50,11 @@ export class InvisiButton extends LitElement {
         background-color: transparent;
         border: 2px solid var(--invisi-button-background-color);
         cursor:pointer;
-        
       }
-      .arrowrotate:hover 
+      button:hover .arrowrotate, button:focus .arrowrotate 
       {
-        transform:rotate(90deg);
-        transition: all 0.1s ease;
+        transform:rotate(360deg);
+        transition: all 0.5s ease;
       }
       a {
         color: var(--invisi-button-color);
@@ -69,7 +68,8 @@ export class InvisiButton extends LitElement {
       link: { type: String },
       title: { type: String },
       icon: { type: String },
-      disabled: { type: Boolean, reflect: true }
+      disabled: { type: Boolean, reflect: true },
+      dark: { type: Boolean, reflect: true }
     };
   }
 
@@ -79,14 +79,15 @@ export class InvisiButton extends LitElement {
     this.title = "Join now for free";
     this.icon = false;
     this.disabled = false;
+    this.dark = false;
   }
 
   render() {
     return html`
     <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link">
-    <button class = "invisi" ?disabled="${this.disabled}">
-    ${this.icon ? html`<simple-icon-lite  class= "arrowrotate" icon="${this.icon}"></simple-icon-lite>` : ''}
+    <button class = "invisi" ?disabled="${this.disabled}" ?dark="${this.dark}">
     ${this.title}
+    ${this.icon ? html`<simple-icon-lite  class= "arrowrotate" icon="${this.icon}"></simple-icon-lite>` : ''}
     </button>
     </a>
     `;
