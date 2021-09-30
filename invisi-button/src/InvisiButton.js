@@ -39,10 +39,23 @@ export class InvisiButton extends LitElement {
         background-color: var(--invisi-button-disabled-background-color);
         cursor: not-allowed;
       }
-      .invisi:hover, .invisi:focus, .invisi:active {
+     .invisi:focus, .invisi:active {
         color: var(--invisi-button-background-color);
         background-color: transparent;
         border: 2px solid var(--invisi-button-background-color);
+      }
+      .invisi:hover
+      {
+        color: var(--invisi-button-background-color);
+        background-color: transparent;
+        border: 2px solid var(--invisi-button-background-color);
+        cursor:pointer;
+        
+      }
+      .arrowrotate:hover 
+      {
+        transform:rotate(90deg);
+        transition: all 0.1s ease;
       }
       a {
         color: var(--invisi-button-color);
@@ -72,7 +85,7 @@ export class InvisiButton extends LitElement {
     return html`
     <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link">
     <button class = "invisi" ?disabled="${this.disabled}">
-    ${this.icon ? html`<simple-icon-lite icon="${this.icon}"></simple-icon-lite>` : ''}
+    ${this.icon ? html`<simple-icon-lite  class= "arrowrotate" icon="${this.icon}"></simple-icon-lite>` : ''}
     ${this.title}
     </button>
     </a>
