@@ -69,7 +69,6 @@ export class InvisiButton extends LitElement {
       title: { type: String },
       icon: { type: String },
       disabled: { type: Boolean, reflect: true },
-      dark: { type: Boolean, reflect: true }
     };
   }
 
@@ -79,7 +78,6 @@ export class InvisiButton extends LitElement {
     this.title = "Join now for free";
     this.icon = false;
     this.disabled = false;
-    this.dark = false;
   }
 
   render() {
