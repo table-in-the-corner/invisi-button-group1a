@@ -20,10 +20,6 @@
     "@lrnwebcomponents/simple-icon": "^4.0.0",
     "lit": "^2.0.0-rc.4"
   },
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^4.3.0",
