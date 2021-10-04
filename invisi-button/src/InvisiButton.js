@@ -89,7 +89,7 @@ export class InvisiButton extends LitElement {
   
   render() {
     return html`
-    <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link">
+    <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link" @click=${this._playaudio}>
     <button class = "invisi" ?disabled="${this.disabled}">
     ${this.title}
     ${this.icon ? html`<simple-icon-lite  class= "arrowrotate" icon="${this.icon}"></simple-icon-lite>` : ''}
