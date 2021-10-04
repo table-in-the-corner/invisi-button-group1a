@@ -69,6 +69,7 @@ export class InvisiButton extends LitElement {
       title: { type: String },
       icon: { type: String },
       disabled: { type: Boolean, reflect: true },
+      sound: {type: String}
     };
   }
 
@@ -78,11 +79,17 @@ export class InvisiButton extends LitElement {
     this.title = "Join now for free";
     this.icon = false;
     this.disabled = false;
+    this.sound= './itsbritney (1).mp3';
   }
 
+  _playaudio() {
+    let audio = new Audio(new URL( this.sound, import.meta.url).href);
+    audio.play();
+  }
+  
   render() {
     return html`
-    <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link">
+    <a href="${this.link}" tabindex=-1 role="button" rel="noopener noreferrer" part="invisi-button-link" @click=${this._playaudio>
     <button class = "invisi" ?disabled="${this.disabled}">
     ${this.title}
     ${this.icon ? html`<simple-icon-lite  class= "arrowrotate" icon="${this.icon}"></simple-icon-lite>` : ''}
